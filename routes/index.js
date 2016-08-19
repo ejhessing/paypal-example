@@ -28,8 +28,8 @@ exports.create = function (req, res) {
 	if (method === 'paypal') {
 		payment.payer.payment_method = 'paypal';
 		payment.redirect_urls = {
-			"return_url": "http://pprestnode.herokuapp.com/execute",
-			"cancel_url": "http://pprestnode.herokuapp.com/cancel"
+			"return_url": "/execute",
+			"cancel_url": "/cancel"
 		};
 	} else if (method === 'credit_card') {
 		var funding_instruments = [
